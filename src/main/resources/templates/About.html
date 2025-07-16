@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/common_colors.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/navigation_bar.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/footer.css') }}">
+    <title>About</title>
+    <link rel="stylesheet" th:href="@{/css/common_colors.css}">
+    <link rel="stylesheet" th:href="@{/css/navigation_bar.css}">
+    <link rel="stylesheet" th:href="@{/css/footer.css}">
 </head>
 <body>
     <header>
@@ -14,20 +14,18 @@
             <div class="flex-container" id="inner_navigation-bar">
                 <div id="home" class="flex-item">
                     <h3>
-                        <a href="{{ url_for('home.home') }}" id="nav-link-home" class="nav-link">Home</a>
+                        <a th:href="@{/home}" id="nav-link-home" class="nav-link">Home</a>
                     </h3>
                 </div>
                 <div id="about" class="flex-item">
                     <h3>
-                        <a href="{{ url_for('about.about') }}" id="nav-link-about" class="nav-link">About</a>
+                        <a th:href="@{/about}" id="nav-link-about" class="nav-link">About</a>
                     </h3>
                 </div>
             </div>
         </div>
     </header>
-    <div class="data-form" id="area">
-        <form action="" method="post"></form>
-    </div>
+    
     <footer>
         <div class="copyright">
             <p>
